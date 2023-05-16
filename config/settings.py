@@ -84,15 +84,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {"default": dj_database_url.config()}
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'api_db_azqk',
+         'USER': 'api_db',
+         'PASSWORD': 'oPYTvkmKvj7BxXAO0SmHehU63SnhbB1a',
+         'HOST': 'dpg-chhpavrhp8ufj5p9vi60-a',
+         'PORT': '5432',
+     }
+ }
+
 
 
 # Password validation
